@@ -48,9 +48,9 @@ a { text-decoration:none; }
 .hero-content { display:grid; grid-template-columns:1fr; gap:60px; align-items:center; text-align:center; }
 .hero-text h1 { font-size:48px; font-weight:900; margin-bottom:20px; line-height:1.2; }
 .hero-text p { font-size:20px; margin-bottom:35px; opacity:0.95; }
-.hero-buttons { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; }
+.hero-buttons { display:flex; gap:15px; flex-wrap:wrap; justify-content:center; }
 .btn { display:inline-flex; align-items:center; gap:10px; padding:16px 32px; font-size:18px; font-weight:700; border-radius:12px; transition:all 0.3s; cursor:pointer; border:none; }
-.btn-primary { background:#fff; color:var(--primary-dark); } /* لون التحميل نفس لون التحديث */
+.btn-primary { background:#fff; color:var(--primary-dark); } /* لون التحميل مثل التحديث */
 .btn-primary:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
 .btn-secondary { background:#fff; color:var(--primary-dark); }
 .btn-secondary:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
@@ -58,15 +58,21 @@ a { text-decoration:none; }
 /* Contact Bar Buttons */
 .contact-bar { padding:25px 0; text-align:center; }
 .contact-links { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
-.contact-links a {
-  display:inline-flex; align-items:center; gap:10px;
-  padding:12px 24px; border-radius:10px;
-  font-weight:600; color:#fff; transition:0.3s;
+.contact-btn {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:15px 25px;
+  background: var(--feature-gray);
+  color:#fff;
+  border-radius:12px;
+  font-weight:700;
+  font-size:16px;
+  transition:all 0.3s;
+  box-shadow: var(--shadow-sm);
 }
-.contact-links a.telegram { background:#0088cc; }
-.contact-links a.instagram { background:#C13584; }
-.contact-links a.facebook { background:#3b5998; }
-.contact-links a:hover { transform:translateY(-3px); opacity:0.9; }
+.contact-btn:hover { transform:translateY(-3px); box-shadow: var(--shadow-md); opacity:0.9; }
+.contact-icon { width:30px; height:30px; display:flex; align-items:center; justify-content:center; font-size:18px; }
 
 /* Features */
 .features-section { padding:80px 0; background:var(--light-bg); }
@@ -90,7 +96,7 @@ a { text-decoration:none; }
 
 /* Footer */
 footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
-.footer-content { display:grid; grid-template-columns:1fr 1fr; gap:50px; margin-bottom:40px; } /* حذف شعار الفوتر */
+.footer-content { display:grid; grid-template-columns:2fr 1fr 1fr; gap:50px; margin-bottom:40px; }
 .footer-links h4 { font-size:20px; font-weight:700; margin-bottom:20px; color:#fff; }
 .footer-links ul { list-style:none; }
 .footer-links ul li { margin-bottom:12px; }
@@ -131,7 +137,6 @@ footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
           <a href="#" class="btn btn-secondary" download>🔄 تحديث التطبيق</a>
         </div>
       </div>
-      <!-- حذف صورة الهاتف -->
     </div>
   </div>
 </section>
@@ -140,9 +145,15 @@ footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
 <section class="contact-bar">
   <div class="container">
     <div class="contact-links">
-      <a href="https://t.me/goanimeapp" target="_blank" class="telegram">📱 تليجرام</a>
-      <a href="https://www.instagram.com/goanimeapp" target="_blank" class="instagram">📸 انستجرام</a>
-      <a href="https://www.facebook.com/goanimeapp" target="_blank" class="facebook">📘 فيسبوك</a>
+      <a href="https://t.me/goanimeapp" target="_blank" class="contact-btn">
+        <div class="contact-icon">📱</div> تليجرام
+      </a>
+      <a href="https://www.instagram.com/goanimeapp" target="_blank" class="contact-btn">
+        <div class="contact-icon">📸</div> انستجرام
+      </a>
+      <a href="https://www.facebook.com/goanimeapp" target="_blank" class="contact-btn">
+        <div class="contact-icon">📘</div> فيسبوك
+      </a>
     </div>
   </div>
 </section>
@@ -180,14 +191,9 @@ footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
 <footer>
   <div class="container">
     <div class="footer-content">
-      <!-- حذف شعار الفوتر -->
       <div class="footer-links">
         <h4>روابط سريعة</h4>
-        <ul>
-          <li><a href="#home">الرئيسية</a></li>
-          <li><a href="#features">المميزات</a></li>
-          <li><a href="#download">التنزيل</a></li>
-        </ul>
+        <ul><li><a href="#home">الرئيسية</a></li><li><a href="#features">المميزات</a></li><li><a href="#download">التنزيل</a></li></ul>
       </div>
       <div class="footer-links">
         <h4>تواصل معنا</h4>
@@ -206,5 +212,6 @@ footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
 function toggleMenu() { document.getElementById('navMenu').classList.toggle('active'); }
 document.querySelectorAll('.nav-menu a').forEach(link => { link.addEventListener('click', ()=>{ document.getElementById('navMenu').classList.remove('active'); }); });
 </script>
+
 </body>
 </html>

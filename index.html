@@ -26,6 +26,7 @@ a { text-decoration:none; }
   --text-light:#fff;
   --shadow-sm:0 2px 8px rgba(0,0,0,0.1);
   --shadow-md:0 4px 16px rgba(0,0,0,0.15);
+  --feature-gray:#95A5A6;
 }
 
 /* Containers */
@@ -34,7 +35,7 @@ a { text-decoration:none; }
 /* Navbar */
 .navbar { background:#fff; box-shadow:var(--shadow-sm); position:sticky; top:0; z-index:1000; }
 .nav-container { display:flex; justify-content:space-between; align-items:center; padding:15px 20px; }
-.logo-text { font-size:24px; font-weight:900; color:var(--primary-dark); }
+.logo-text { font-size:24px; font-weight:900; color:#fff; } /* GO ANIME باللون الأبيض */
 .nav-menu { display:flex; list-style:none; gap:30px; }
 .nav-menu a { color:var(--text-dark); font-weight:600; position:relative; }
 .nav-menu a::after { content:''; position:absolute; bottom:-5px; left:0; width:0; height:3px; background:var(--accent-color); transition:0.3s; }
@@ -49,12 +50,12 @@ a { text-decoration:none; }
 .hero-text p { font-size:20px; margin-bottom:35px; opacity:0.95; }
 .hero-buttons { display:flex; gap:15px; flex-wrap:wrap; }
 .btn { display:inline-flex; align-items:center; gap:10px; padding:16px 32px; font-size:18px; font-weight:700; border-radius:12px; transition:all 0.3s; cursor:pointer; border:none; }
-.btn-primary { background:var(--accent-color); color:#fff; }
-.btn-primary:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(255,82,82,0.4); }
+.btn-primary { background:#fff; color:var(--primary-dark); } /* لون التحميل بنفس لون التحديث */
+.btn-primary:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
 .btn-secondary { background:#fff; color:var(--primary-dark); }
-.btn-secondary:hover { transform:translateY(-3px); background:#f0f0f0; }
+.btn-secondary:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
 
-/* Contact Bar Buttons موحدة الشكل */
+/* Contact Bar Buttons */
 .contact-bar { padding:25px 0; text-align:center; }
 .contact-links { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
 .contact-links a {
@@ -72,22 +73,26 @@ a { text-decoration:none; }
 .section-title { text-align:center; margin-bottom:60px; }
 .section-title h2 { font-size:42px; font-weight:900; color:var(--text-dark); margin-bottom:15px; }
 .features-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:40px; }
-.feature-card { background:#fff; padding:40px 30px; border-radius:20px; text-align:center; box-shadow:var(--shadow-sm); transition:0.4s; cursor:pointer; }
+.feature-card { background:var(--feature-gray); padding:40px 30px; border-radius:20px; text-align:center; box-shadow:var(--shadow-sm); transition:0.4s; cursor:pointer; color:#fff; }
 .feature-card:hover { transform:translateY(-10px); box-shadow:0 8px 32px rgba(0,0,0,0.2); }
-.feature-icon { width:80px; height:80px; margin:0 auto 25px; background:var(--accent-color); border-radius:20px; display:flex; align-items:center; justify-content:center; }
-.feature-icon img { width:45px; height:45px; filter:brightness(0) invert(1); }
-.feature-card h3 { font-size:24px; font-weight:800; color:var(--text-dark); margin-bottom:15px; }
-.feature-card p { font-size:16px; color:#7F8C8D; line-height:1.8; }
+.feature-icon { width:80px; height:80px; margin:0 auto 25px; background:#fff; border-radius:20px; display:flex; align-items:center; justify-content:center; color:var(--feature-gray); font-size:36px; font-weight:bold; }
+.feature-card h3 { font-size:24px; font-weight:800; margin-bottom:15px; }
+.feature-card p { font-size:16px; line-height:1.8; }
 
 /* Download Section */
 .download-section { padding:80px 0; background:linear-gradient(135deg,#2C3E50 0%,#34495E 100%); color:#fff; text-align:center; }
 .download-content h2 { font-size:42px; font-weight:900; margin-bottom:20px; }
 .download-buttons { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
+/* زر التحميل والتحديث */
+.download-buttons .btn-primary { background:#fff; color:var(--primary-dark); }
+.download-buttons .btn-primary:hover { transform:translateY(-3px); }
+.download-buttons .btn-secondary { background:#fff; color:var(--primary-dark); }
+.download-buttons .btn-secondary:hover { transform:translateY(-3px); }
 
 /* Footer */
 footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
 .footer-content { display:grid; grid-template-columns:2fr 1fr 1fr; gap:50px; margin-bottom:40px; }
-.footer-logo span { font-size:24px; font-weight:900; color:var(--accent-color); }
+.footer-logo span { font-size:24px; font-weight:900; color:#fff; } /* GO ANIME أبيض */
 .footer-links h4 { font-size:20px; font-weight:700; margin-bottom:20px; color:#fff; }
 .footer-links ul { list-style:none; }
 .footer-links ul li { margin-bottom:12px; }
@@ -201,16 +206,8 @@ footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
 </footer>
 
 <script>
-// Mobile Menu Toggle
-function toggleMenu() {
-    const navMenu = document.getElementById('navMenu');
-    navMenu.classList.toggle('active');
-}
-
-// Close menu when clicking on a link
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => { document.getElementById('navMenu').classList.remove('active'); });
-});
+function toggleMenu() { document.getElementById('navMenu').classList.toggle('active'); }
+document.querySelectorAll('.nav-menu a').forEach(link => { link.addEventListener('click', ()=>{ document.getElementById('navMenu').classList.remove('active'); }); });
 </script>
 </body>
 </html>

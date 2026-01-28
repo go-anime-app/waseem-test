@@ -27,7 +27,7 @@ a { text-decoration:none; }
   --shadow-sm:0 2px 8px rgba(0,0,0,0.1);
   --shadow-md:0 4px 16px rgba(0,0,0,0.15);
   --feature-gray:#34495E; /* لون المميزات */
-  --contact-gray:#34495E; /* نفس درجة الخلفية */
+  --contact-gray:#34495E; /* لون أزرار التواصل */
 }
 
 /* Containers */
@@ -73,8 +73,20 @@ a { text-decoration:none; }
   transition:all 0.3s;
   box-shadow: var(--shadow-sm);
   min-width:150px;
+  border:none;
 }
-.contact-btn:hover { transform:translateY(-3px); box-shadow: var(--shadow-md); opacity:0.9; }
+.contact-btn img {
+  display:inline-block;
+  vertical-align:middle;
+  width:24px;
+  height:24px;
+  filter:invert(1); /* أيقونات بيضاء */
+}
+.contact-btn:hover {
+  transform:translateY(-3px);
+  box-shadow: var(--shadow-md);
+  opacity:0.9;
+}
 
 /* Features */
 .features-section { padding:80px 0; background:var(--light-bg); }
@@ -147,9 +159,15 @@ footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
 <section class="contact-bar">
   <div class="container">
     <div class="contact-links">
-      <a href="https://t.me/goanimeapp" target="_blank" class="contact-btn">📱 تليجرام</a>
-      <a href="https://www.instagram.com/goanimeapp" target="_blank" class="contact-btn">📸 انستجرام</a>
-      <a href="https://www.facebook.com/goanimeapp" target="_blank" class="contact-btn">📘 فيسبوك</a>
+      <a href="https://t.me/goanimeapp" target="_blank" class="contact-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram"> تليجرام
+      </a>
+      <a href="https://www.instagram.com/goanimeapp" target="_blank" class="contact-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram"> انستجرام
+      </a>
+      <a href="https://www.facebook.com/goanimeapp" target="_blank" class="contact-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"> فيسبوك
+      </a>
     </div>
   </div>
 </section>

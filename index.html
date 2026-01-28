@@ -4,822 +4,200 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Primary Meta Tags -->
-<title>تاكسي مسار كابتن - تحميل تطبيق الكابتن | Taxi Masar Captain</title>
-<meta name="title" content="تاكسي مسار كابتن - تحميل تطبيق الكابتن">
-<meta name="description" content="قم بتنزيل تطبيق مسار كابتن لإدارة رحلاتك بكفاءة وسهولة. تطبيق مبتكر للحصول على رحلات جديدة بسرعة مع دعم فني مستمر.">
-<meta name="keywords" content="تاكسي مسار, مسار كابتن, تطبيق كابتن, تاكسي الأردن, taxi masar">
-<meta name="author" content="تاكسي مسار">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://taximasar.wiki3rbi.com/">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://taximasar.wiki3rbi.com/">
-<meta property="og:title" content="تاكسي مسار كابتن - تحميل تطبيق الكابتن">
-<meta property="og:description" content="قم بتنزيل تطبيق مسار كابتن لإدارة رحلاتك بكفاءة وسهولة">
-<meta property="og:image" content="https://taximasar.wiki3rbi.com/img/logo.png">
-<meta property="og:locale" content="ar_AR">
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://taximasar.wiki3rbi.com/">
-<meta property="twitter:title" content="تاكسي مسار كابتن - تحميل تطبيق الكابتن">
-<meta property="twitter:description" content="قم بتنزيل تطبيق مسار كابتن لإدارة رحلاتك بكفاءة وسهولة">
-<meta property="twitter:image" content="https://taximasar.wiki3rbi.com/img/logo.png">
-
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="img/logo.png">
+<title>GO ANIME - تحميل تطبيق جو انمي</title>
+<meta name="description" content="أفضل تطبيق لمشاهدة مسلسلات وأفلام الأنمي المترجمة. حمل التطبيق الآن وابدأ المغامرة!">
+<meta name="keywords" content="أنمي, جو انمي, Anime, تطبيق مشاهدة الانمي, مسلسلات أنمي, أفلام أنمي">
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-<!-- Schema.org -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "تاكسي مسار كابتن",
-  "operatingSystem": "Android",
-  "applicationCategory": "BusinessApplication",
-  "description": "تطبيق مسار كابتن لإدارة رحلات التاكسي بكفاءة وسهولة",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "JOD"
-  }
-}
-</script>
-
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Cairo','Tajawal',sans-serif; line-height:1.7; color:#2C3E50; background:#fff; overflow-x:hidden; }
+a { text-decoration:none; }
 
 :root {
-    --primary-dark: #2C3E50;
-    --primary-gray: #546E7A;
-    --accent-light: #B0BEC5;
-    --dark-bg: #1A1F2E;
-    --darker-bg: #131820;
-    --light-bg: #F5F7FA;
-    --text-dark: #2C3E50;
-    --text-light: #ECF0F1;
-    --text-gray: #7F8C8D;
-    --border-color: #E0E4E8;
-    --shadow-sm: 0 2px 8px rgba(0,0,0,0.1);
-    --shadow-md: 0 4px 16px rgba(0,0,0,0.15);
-    --shadow-lg: 0 8px 32px rgba(0,0,0,0.2);
-    --gradient-dark: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
-    --gradient-gray: linear-gradient(135deg, #546E7A 0%, #607D8B 100%);
-    --gradient-light: linear-gradient(135deg, #ECEFF1 0%, #CFD8DC 100%);
+  --primary-dark:#2C3E50;
+  --accent-color:#FF5252;
+  --light-bg:#F5F7FA;
+  --text-dark:#2C3E50;
+  --text-light:#fff;
+  --shadow-sm:0 2px 8px rgba(0,0,0,0.1);
+  --shadow-md:0 4px 16px rgba(0,0,0,0.15);
 }
 
-body {
-    font-family: 'Cairo', 'Tajawal', -apple-system, BlinkMacSystemFont, sans-serif;
-    line-height: 1.7;
-    color: var(--text-dark);
-    background: #fff;
-    overflow-x: hidden;
-}
+/* Containers */
+.container { max-width:1200px; margin:0 auto; padding:0 20px; }
 
-/* Smooth Scroll */
-html {
-    scroll-behavior: smooth;
-}
+/* Navbar */
+.navbar { background:#fff; box-shadow:var(--shadow-sm); position:sticky; top:0; z-index:1000; }
+.nav-container { display:flex; justify-content:space-between; align-items:center; padding:15px 20px; }
+.logo-text { font-size:24px; font-weight:900; color:var(--primary-dark); }
+.nav-menu { display:flex; list-style:none; gap:30px; }
+.nav-menu a { color:var(--text-dark); font-weight:600; position:relative; }
+.nav-menu a::after { content:''; position:absolute; bottom:-5px; left:0; width:0; height:3px; background:var(--accent-color); transition:0.3s; }
+.nav-menu a:hover::after, .nav-menu a.active::after { width:100%; }
+.menu-toggle { display:none; flex-direction:column; gap:5px; cursor:pointer; }
+.menu-toggle span { width:25px; height:3px; background:var(--primary-dark); border-radius:2px; }
 
-/* Container */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+/* Hero */
+.hero { background:linear-gradient(135deg,#2C3E50 0%,#34495E 100%); color:#fff; padding:80px 0; }
+.hero-content { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+.hero-text h1 { font-size:48px; font-weight:900; margin-bottom:20px; line-height:1.2; }
+.hero-text p { font-size:20px; margin-bottom:35px; opacity:0.95; }
+.hero-buttons { display:flex; gap:15px; flex-wrap:wrap; }
+.btn { display:inline-flex; align-items:center; gap:10px; padding:16px 32px; font-size:18px; font-weight:700; border-radius:12px; transition:all 0.3s; cursor:pointer; border:none; }
+.btn-primary { background:var(--accent-color); color:#fff; }
+.btn-primary:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(255,82,82,0.4); }
+.btn-secondary { background:#fff; color:var(--primary-dark); }
+.btn-secondary:hover { transform:translateY(-3px); background:#f0f0f0; }
 
-/* Navigation */
-.navbar {
-    background: #fff;
-    box-shadow: var(--shadow-sm);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    animation: slideDown 0.5s ease-out;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-}
-
-.logo img {
-    height: 50px;
-    width: auto;
-}
-
-.logo-text {
-    font-size: 24px;
-    font-weight: 900;
-    color: var(--primary-dark);
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-    margin: 0;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: var(--text-dark);
-    font-weight: 600;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.nav-menu a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background: var(--gradient-dark);
-    transition: width 0.3s ease;
-}
-
-.nav-menu a:hover::after,
-.nav-menu a.active::after {
-    width: 100%;
-}
-
-.nav-menu a:hover {
-    color: var(--primary-dark);
-}
-
-/* Mobile Menu Toggle */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background: var(--primary-dark);
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-/* Hero Section */
-.hero {
-    background: var(--gradient-dark);
-    color: white;
-    padding: 80px 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -10%;
-    width: 500px;
-    height: 500px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    animation: float 20s ease-in-out infinite;
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    bottom: -30%;
-    left: -5%;
-    width: 400px;
-    height: 400px;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 50%;
-    animation: float 15s ease-in-out infinite reverse;
-}
-
-@keyframes float {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(-20px, -20px); }
-}
-
-.hero-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-}
-
-.hero-text {
-    animation: fadeInRight 1s ease-out;
-}
-
-.hero-text h1 {
-    font-size: 48px;
-    font-weight: 900;
-    margin-bottom: 20px;
-    line-height: 1.2;
-}
-
-.hero-text p {
-    font-size: 20px;
-    margin-bottom: 35px;
-    line-height: 1.6;
-    opacity: 0.95;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 16px 32px;
-    font-size: 18px;
-    font-weight: 700;
-    border-radius: 12px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border: none;
-}
-
-.btn-primary {
-    background: var(--gradient-light);
-    color: var(--text-dark);
-    box-shadow: 0 8px 20px rgba(176, 190, 197, 0.4);
-}
-
-.btn-primary:hover {
-    background: linear-gradient(135deg, #CFD8DC 0%, #B0BEC5 100%);
-    transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(176, 190, 197, 0.5);
-}
-
-.btn-secondary {
-    background: white;
-    color: var(--primary-dark);
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
-}
-
-.btn-secondary:hover {
-    background: #f8f9fa;
-    transform: translateY(-3px);
-}
-
-.hero-image {
-    text-align: center;
-    animation: fadeInLeft 1s ease-out;
-}
-
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
-    animation: phoneFloat 3s ease-in-out infinite;
-}
-
-@keyframes phoneFloat {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-}
-
-/* Contact Section */
-.contact-bar {
-    background: var(--gradient-light);
-    padding: 25px 0;
-    text-align: center;
-}
-
-.contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-
+/* Contact Bar Buttons موحدة الشكل */
+.contact-bar { padding:25px 0; text-align:center; }
+.contact-links { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
 .contact-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 28px;
-    background: white;
-    color: var(--text-dark);
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow-sm);
+  display:inline-flex; align-items:center; gap:10px;
+  padding:12px 24px; border-radius:10px;
+  font-weight:600; color:#fff; transition:0.3s;
 }
+.contact-links a.telegram { background:#0088cc; }
+.contact-links a.instagram { background:#C13584; }
+.contact-links a.facebook { background:#3b5998; }
+.contact-links a:hover { transform:translateY(-3px); opacity:0.9; }
 
-.contact-links a:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
-}
-
-.contact-links a svg,
-.contact-links a img {
-    width: 24px;
-    height: 24px;
-}
-
-/* Features Section */
-.features-section {
-    padding: 80px 0;
-    background: var(--light-bg);
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.section-title h2 {
-    font-size: 42px;
-    font-weight: 900;
-    color: var(--text-dark);
-    margin-bottom: 15px;
-}
-
-.section-title p {
-    font-size: 18px;
-    color: #7F8C8D;
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-}
-
-.feature-card {
-    background: white;
-    padding: 40px 30px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: var(--shadow-sm);
-    transition: all 0.4s ease;
-    cursor: pointer;
-}
-
-.feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
-}
-
-.feature-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 25px;
-    background: var(--gradient-gray);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 8px 20px rgba(84, 110, 122, 0.3);
-}
-
-.feature-icon img {
-    width: 45px;
-    height: 45px;
-    filter: brightness(0) invert(1);
-}
-
-.feature-card h3 {
-    font-size: 24px;
-    font-weight: 800;
-    color: var(--text-dark);
-    margin-bottom: 15px;
-}
-
-.feature-card p {
-    font-size: 16px;
-    color: #7F8C8D;
-    line-height: 1.8;
-}
+/* Features */
+.features-section { padding:80px 0; background:var(--light-bg); }
+.section-title { text-align:center; margin-bottom:60px; }
+.section-title h2 { font-size:42px; font-weight:900; color:var(--text-dark); margin-bottom:15px; }
+.features-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:40px; }
+.feature-card { background:#fff; padding:40px 30px; border-radius:20px; text-align:center; box-shadow:var(--shadow-sm); transition:0.4s; cursor:pointer; }
+.feature-card:hover { transform:translateY(-10px); box-shadow:0 8px 32px rgba(0,0,0,0.2); }
+.feature-icon { width:80px; height:80px; margin:0 auto 25px; background:var(--accent-color); border-radius:20px; display:flex; align-items:center; justify-content:center; }
+.feature-icon img { width:45px; height:45px; filter:brightness(0) invert(1); }
+.feature-card h3 { font-size:24px; font-weight:800; color:var(--text-dark); margin-bottom:15px; }
+.feature-card p { font-size:16px; color:#7F8C8D; line-height:1.8; }
 
 /* Download Section */
-.download-section {
-    padding: 80px 0;
-    background: var(--gradient-dark);
-    color: white;
-    text-align: center;
-}
-
-.download-content h2 {
-    font-size: 42px;
-    font-weight: 900;
-    margin-bottom: 20px;
-}
-
-.download-content p {
-    font-size: 20px;
-    margin-bottom: 40px;
-    opacity: 0.95;
-}
-
-.download-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
+.download-section { padding:80px 0; background:linear-gradient(135deg,#2C3E50 0%,#34495E 100%); color:#fff; text-align:center; }
+.download-content h2 { font-size:42px; font-weight:900; margin-bottom:20px; }
+.download-buttons { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
 
 /* Footer */
-footer {
-    background: var(--darker-bg);
-    color: var(--text-light);
-    padding: 50px 0 30px;
-}
+footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
+.footer-content { display:grid; grid-template-columns:2fr 1fr 1fr; gap:50px; margin-bottom:40px; }
+.footer-logo span { font-size:24px; font-weight:900; color:var(--accent-color); }
+.footer-links h4 { font-size:20px; font-weight:700; margin-bottom:20px; color:#fff; }
+.footer-links ul { list-style:none; }
+.footer-links ul li { margin-bottom:12px; }
+.footer-links ul li a { color:#95A5A6; font-size:15px; transition:0.3s; }
+.footer-links ul li a:hover { color:var(--accent-color); padding-right:5px; }
+.footer-bottom { text-align:center; padding-top:30px; border-top:1px solid rgba(255,255,255,0.1); color:#95A5A6; font-size:15px; }
 
-.footer-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 50px;
-    margin-bottom: 40px;
-}
-
-.footer-brand {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.footer-logo img {
-    height: 50px;
-}
-
-.footer-logo span {
-    font-size: 24px;
-    font-weight: 900;
-    color: var(--accent-light);
-}
-
-.footer-brand p {
-    color: #95A5A6;
-    line-height: 1.8;
-}
-
-.footer-links h4 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: white;
-}
-
-.footer-links ul {
-    list-style: none;
-}
-
-.footer-links ul li {
-    margin-bottom: 12px;
-}
-
-.footer-links ul li a {
-    color: #95A5A6;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-size: 15px;
-}
-
-.footer-links ul li a:hover {
-    color: var(--accent-light);
-    padding-right: 5px;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    color: #95A5A6;
-    font-size: 15px;
-}
-
-/* Animations */
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 968px) {
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-    
-    .hero-text {
-        text-align: center;
-    }
-    
-    .hero-buttons {
-        justify-content: center;
-    }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-}
-
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
-    
-    .nav-menu {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        background: white;
-        flex-direction: column;
-        gap: 0;
-        padding: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-        box-shadow: var(--shadow-md);
-    }
-    
-    .nav-menu.active {
-        max-height: 300px;
-    }
-    
-    .nav-menu li {
-        border-bottom: 1px solid var(--border-color);
-    }
-    
-    .nav-menu a {
-        display: block;
-        padding: 15px 20px;
-    }
-    
-    .hero-text h1 {
-        font-size: 36px;
-    }
-    
-    .hero-text p {
-        font-size: 18px;
-    }
-    
-    .section-title h2 {
-        font-size: 32px;
-    }
-    
-    .download-content h2 {
-        font-size: 32px;
-    }
-    
-    .hero-buttons,
-    .download-buttons {
-        flex-direction: column;
-    }
-    
-    .btn {
-        width: 100%;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-text h1 {
-        font-size: 28px;
-    }
-    
-    .section-title h2 {
-        font-size: 26px;
-    }
-    
-    .feature-card {
-        padding: 30px 20px;
-    }
-}
+/* Responsive */
+@media (max-width:968px) { .hero-content { grid-template-columns:1fr; gap:40px; text-align:center; } }
+@media (max-width:768px) { .menu-toggle { display:flex; } .nav-menu { flex-direction:column; max-height:0; overflow:hidden; transition:0.3s; } .nav-menu.active { max-height:300px; } .nav-menu li { border-bottom:1px solid #E0E4E8; } .hero-buttons, .download-buttons { flex-direction:column; } .btn { width:100%; justify-content:center; } }
+@media (max-width:480px) { .hero-text h1 { font-size:28px; } .section-title h2 { font-size:26px; } .feature-card { padding:30px 20px; } }
 </style>
 </head>
-
 <body>
 
-<!-- Navigation -->
+<!-- Navbar -->
 <nav class="navbar">
-    <div class="nav-container">
-        <a href="#" class="logo">
-          
-            <span class="logo-text">GO ANIME</span>
-        </a>
-        
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        
-        <ul class="nav-menu" id="navMenu">
-            <li><a href="#home" class="active">الرئيسية</a></li>
-            <li><a href="#features">المميزات</a></li>
-            <li><a href="#download">التنزيل</a></li>
-        </ul>
-    </div>
+  <div class="nav-container">
+    <a href="#" class="logo"><span class="logo-text">GO ANIME</span></a>
+    <div class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home" class="active">الرئيسية</a></li>
+      <li><a href="#features">المميزات</a></li>
+      <li><a href="#download">التنزيل</a></li>
+    </ul>
+  </div>
 </nav>
 
-<!-- Hero Section -->
+<!-- Hero -->
 <section class="hero" id="home">
-    <div class="container">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>تحميل تطبيق جو انمي</h1>
-                <p>افضل تطبيق لمشاهدة مسلسلات وافلام الانمي حان وقت التجربة</p>
-                
-                <div class="hero-buttons">
-                    <a href="https://www.xgtimayfsa.com/download/go_anime_v1.apk" class="btn btn-primary" download>
-                        ⬇️ تحميل التطبيق
-                    </a>
-                    <a href="https://www.xgtimayfsa.com/download/go_anime_v1.apk" class="btn btn-secondary" download>
-                        🔄 تحديث التطبيق
-                    </a>
-                </div>
-            </div>
-            
-            <div class="hero-image">
-                <img src="img/phone-image.png" alt="تطبيق جو انمي">
-            </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>تحميل تطبيق جو انمي</h1>
+        <p>أفضل تطبيق لمشاهدة مسلسلات وأفلام الانمي المترجمة</p>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary" download>⬇️ تحميل التطبيق</a>
+          <a href="#" class="btn btn-secondary" download>🔄 تحديث التطبيق</a>
         </div>
+      </div>
+      <div class="hero-image">
+        <img src="img/phone-image.png" alt="تطبيق جو انمي">
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- Contact Bar -->
 <section class="contact-bar">
-    <div class="container">
-        <div class="contact-links">
-            <a href="https://t.me/taximasarjo" target="_blank" rel="noopener noreferrer">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.693-1.653-1.124-2.678-1.8-1.185-.781-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.329-.913.489-1.302.481-.428-.008-1.252-.241-1.865-.44-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635.099-.002.321.023.465.14.121.099.154.232.17.325.016.093.036.305.02.47z"/>
-                </svg>
-                تواصل عبر تليجرام
-            </a>
-            <a href="https://m.me/taximasar" target="_blank" rel="noopener noreferrer">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 0C5.373 0 0 4.975 0 11.111c0 3.497 1.745 6.616 4.472 8.652V24l4.086-2.242c1.09.301 2.246.464 3.442.464 6.627 0 12-4.974 12-11.111C24 4.975 18.627 0 12 0zm1.191 14.963l-3.055-3.26-5.963 3.26L10.732 8l3.131 3.259L19.752 8l-6.561 6.963z"/>
-                </svg>
-                تواصل عبر ماسنجر
-            </a>
-        </div>
+  <div class="container">
+    <div class="contact-links">
+      <a href="https://t.me/goanimeapp" target="_blank" class="telegram">📱 تليجرام</a>
+      <a href="https://www.instagram.com/goanimeapp" target="_blank" class="instagram">📸 انستجرام</a>
+      <a href="https://www.facebook.com/goanimeapp" target="_blank" class="facebook">📘 فيسبوك</a>
     </div>
+  </div>
 </section>
 
-<!-- Features Section -->
+<!-- Features -->
 <section class="features-section" id="features">
-    <div class="container">
-        <div class="section-title">
-            <h2>مميزات تطبيق جو انمي</h2>
-        </div>
-        
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <img src="img/icon-1.png" alt="سهولة الاستخدام">
-                </div>
-                <h3>سهل الاستخدام</h3>
-                <p>تاكسي مسار يوفر لك واجهة بسيطة وسهلة للوصول إلى رحلاتك بسرعة.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <img src="img/icon-2.png" alt="التنقل السريع">
-                </div>
-                <h3>رحلات سريعة</h3>
-                <p>تطبيق مبتكر يساعدك في الحصول على رحلات جديدة في أسرع وقت وبأقل جهد.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <img src="img/icon-3.png" alt="دعم متواصل">
-                </div>
-                <h3>دعم مستمر</h3>
-                <p>فريق الدعم الفني متاح دائمًا لمساعدتك وتوجيهك لتحقيق أفضل تجربة.</p>
-            </div>
-        </div>
+  <div class="container">
+    <div class="section-title"><h2>مميزات تطبيق جو انمي</h2></div>
+    <div class="features-grid">
+      <div class="feature-card"><div class="feature-icon">🎬</div><h3>مكتبة أنمي ضخمة</h3><p>آلاف مسلسلات وأفلام الأنمي المترجمة بتنوع يناسب جميع الأذواق</p></div>
+      <div class="feature-card"><div class="feature-icon">⏱️</div><h3>حلقات فور صدورها</h3><p>إضافة حلقات الانمي الجديدة مباشرة بعد صدورها بدون تأخير</p></div>
+      <div class="feature-card"><div class="feature-icon">⚡</div><h3>جودة عالية وسرعة تشغيل</h3><p>تشغيل سريع لمسلسلات الانمي مع جودات متعددة وتجربة مشاهدة سلسة</p></div>
+      <div class="feature-card"><div class="feature-icon">🖥️</div><h3>واجهة بسيطة</h3><p>تصميم أنيق وسهل الاستخدام للوصول السريع لمسلسلات والافلام الانمي</p></div>
+      <div class="feature-card"><div class="feature-icon">⬇️</div><h3>تحميل الحلقات</h3><p>تحميل حلقات وافلام الانمي ومشاهدتها لاحقًا بدون إنترنت</p></div>
+      <div class="feature-card"><div class="feature-icon">📝</div><h3>طلب الأنمي</h3><p>اطلب أي مسلسل أنمي وسيتم إضافته بأسرع وقت ممكن</p></div>
     </div>
+  </div>
 </section>
 
 <!-- Download Section -->
 <section class="download-section" id="download">
-    <div class="container">
-        <div class="download-content">
-            <h2>تحميل تطبيق مسار كابتن</h2>
-            <p>قم بتنزيل التطبيق الآن من خلال رابط (APK) المباشر.</p>
-            
-            <div class="download-buttons">
-                <a href="https://wiki3rbi.com/Taxi_Masar_Captin_5.0.4v.apk" class="btn btn-primary" download>
-                    ⬇️ تحميل
-                </a>
-                <a href="https://wiki3rbi.com/Taxi_Masar_Captin_5.0.4v.apk" class="btn btn-secondary" download>
-                    🔄 تحديث
-                </a>
-            </div>
-        </div>
+  <div class="container">
+    <div class="download-content">
+      <h2>تحميل تطبيق جو انمي</h2>
+      <p>قم بتنزيل التطبيق الآن من خلال الرابط المباشر.</p>
+      <div class="download-buttons">
+        <a href="#" class="btn btn-primary" download>⬇️ تحميل</a>
+        <a href="#" class="btn btn-secondary" download>🔄 تحديث</a>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- Footer -->
 <footer>
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <div class="footer-logo">
-                    <img src="img/logo.png" alt="شعار مسار كابتن">
-                    <span>تاكسي مسار</span>
-                </div>
-                <p>تطبيق مسار كابتن - أفضل تطبيق لإدارة رحلات التاكسي في الأردن. انضم إلينا الآن وابدأ في تحقيق دخل مستمر.</p>
-            </div>
-            
-            <div class="footer-links">
-                <h4>روابط سريعة</h4>
-                <ul>
-                    <li><a href="#home">الرئيسية</a></li>
-                    <li><a href="#features">المميزات</a></li>
-                    <li><a href="#download">التنزيل</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-links">
-                <h4>تواصل معنا</h4>
-                <ul>
-                    <li><a href="https://t.me/taximasarjo" target="_blank">تليجرام</a></li>
-                    <li><a href="https://m.me/taximasar" target="_blank">ماسنجر</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            © 2025 مسار كابتن. جميع الحقوق محفوظة.
-        </div>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo"><img src="img/logo.png" alt="شعار جو انمي"><span>GO ANIME</span></div>
+        <p>أفضل تطبيق لمشاهدة مسلسلات وأفلام الأنمي المترجمة. حمل التطبيق الآن وابدأ المغامرة!</p>
+      </div>
+      <div class="footer-links">
+        <h4>روابط سريعة</h4>
+        <ul><li><a href="#home">الرئيسية</a></li><li><a href="#features">المميزات</a></li><li><a href="#download">التنزيل</a></li></ul>
+      </div>
+      <div class="footer-links">
+        <h4>تواصل معنا</h4>
+        <ul>
+          <li><a href="https://t.me/goanimeapp" target="_blank">تليجرام</a></li>
+          <li><a href="https://www.instagram.com/goanimeapp" target="_blank">انستجرام</a></li>
+          <li><a href="https://www.facebook.com/goanimeapp" target="_blank">فيسبوك</a></li>
+        </ul>
+      </div>
     </div>
+    <div class="footer-bottom">© 2026 GO ANIME. جميع الحقوق محفوظة.</div>
+  </div>
 </footer>
 
 <script>
@@ -831,47 +209,8 @@ function toggleMenu() {
 
 // Close menu when clicking on a link
 document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        document.getElementById('navMenu').classList.remove('active');
-    });
-});
-
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Active nav link on scroll
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (scrollY >= (sectionTop - 100)) {
-            current = section.getAttribute('id');
-        }
-    });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
-    });
+    link.addEventListener('click', () => { document.getElementById('navMenu').classList.remove('active'); });
 });
 </script>
-
 </body>
 </html>

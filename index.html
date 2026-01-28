@@ -27,6 +27,7 @@ a { text-decoration:none; }
   --shadow-sm:0 2px 8px rgba(0,0,0,0.1);
   --shadow-md:0 4px 16px rgba(0,0,0,0.15);
   --feature-gray:#95A5A6;
+  --contact-gray:#34495E; /* نفس درجة الخلفية */
 }
 
 /* Containers */
@@ -35,7 +36,7 @@ a { text-decoration:none; }
 /* Navbar */
 .navbar { background:#fff; box-shadow:var(--shadow-sm); position:sticky; top:0; z-index:1000; }
 .nav-container { display:flex; justify-content:space-between; align-items:center; padding:15px 20px; }
-.logo-text { font-size:24px; font-weight:900; color:var(--feature-gray); } /* GO ANIME باللون الرمادي */
+.logo-text { font-size:24px; font-weight:900; color:#fff; } /* GO ANIME باللون الأبيض */
 .nav-menu { display:flex; list-style:none; gap:30px; }
 .nav-menu a { color:var(--text-dark); font-weight:600; position:relative; }
 .nav-menu a::after { content:''; position:absolute; bottom:-5px; left:0; width:0; height:3px; background:var(--accent-color); transition:0.3s; }
@@ -45,12 +46,12 @@ a { text-decoration:none; }
 
 /* Hero */
 .hero { background:linear-gradient(135deg,#2C3E50 0%,#34495E 100%); color:#fff; padding:80px 0; }
-.hero-content { display:grid; grid-template-columns:1fr; gap:60px; align-items:center; text-align:center; }
+.hero-content { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
 .hero-text h1 { font-size:48px; font-weight:900; margin-bottom:20px; line-height:1.2; }
 .hero-text p { font-size:20px; margin-bottom:35px; opacity:0.95; }
-.hero-buttons { display:flex; gap:15px; flex-wrap:wrap; justify-content:center; }
+.hero-buttons { display:flex; gap:15px; flex-wrap:wrap; }
 .btn { display:inline-flex; align-items:center; gap:10px; padding:16px 32px; font-size:18px; font-weight:700; border-radius:12px; transition:all 0.3s; cursor:pointer; border:none; }
-.btn-primary { background:#fff; color:var(--primary-dark); } /* لون التحميل مثل التحديث */
+.btn-primary { background:#fff; color:var(--primary-dark); } 
 .btn-primary:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
 .btn-secondary { background:#fff; color:var(--primary-dark); }
 .btn-secondary:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
@@ -61,18 +62,19 @@ a { text-decoration:none; }
 .contact-btn {
   display:flex;
   align-items:center;
+  justify-content:center;
   gap:10px;
   padding:15px 25px;
-  background: var(--feature-gray);
+  background: var(--contact-gray);
   color:#fff;
   border-radius:12px;
   font-weight:700;
   font-size:16px;
   transition:all 0.3s;
   box-shadow: var(--shadow-sm);
+  min-width:150px;
 }
 .contact-btn:hover { transform:translateY(-3px); box-shadow: var(--shadow-md); opacity:0.9; }
-.contact-icon { width:30px; height:30px; display:flex; align-items:center; justify-content:center; font-size:18px; }
 
 /* Features */
 .features-section { padding:80px 0; background:var(--light-bg); }
@@ -115,7 +117,7 @@ footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
 <!-- Navbar -->
 <nav class="navbar">
   <div class="nav-container">
-    <a href="#" class="logo"><span class="logo-text">GO ANIME</span></a>
+    <a href="#" class="logo"><span class="logo-text" style="color:#34495E;">GO ANIME</span></a>
     <div class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></div>
     <ul class="nav-menu" id="navMenu">
       <li><a href="#home" class="active">الرئيسية</a></li>
@@ -145,15 +147,9 @@ footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
 <section class="contact-bar">
   <div class="container">
     <div class="contact-links">
-      <a href="https://t.me/goanimeapp" target="_blank" class="contact-btn">
-        <div class="contact-icon">📱</div> تليجرام
-      </a>
-      <a href="https://www.instagram.com/goanimeapp" target="_blank" class="contact-btn">
-        <div class="contact-icon">📸</div> انستجرام
-      </a>
-      <a href="https://www.facebook.com/goanimeapp" target="_blank" class="contact-btn">
-        <div class="contact-icon">📘</div> فيسبوك
-      </a>
+      <a href="https://t.me/goanimeapp" target="_blank" class="contact-btn">📱 تليجرام</a>
+      <a href="https://www.instagram.com/goanimeapp" target="_blank" class="contact-btn">📸 انستجرام</a>
+      <a href="https://www.facebook.com/goanimeapp" target="_blank" class="contact-btn">📘 فيسبوك</a>
     </div>
   </div>
 </section>
@@ -191,6 +187,9 @@ footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
 <footer>
   <div class="container">
     <div class="footer-content">
+      <div class="footer-brand">
+        <p>أفضل تطبيق لمشاهدة مسلسلات وأفلام الأنمي المترجمة. حمل التطبيق الآن وابدأ المغامرة!</p>
+      </div>
       <div class="footer-links">
         <h4>روابط سريعة</h4>
         <ul><li><a href="#home">الرئيسية</a></li><li><a href="#features">المميزات</a></li><li><a href="#download">التنزيل</a></li></ul>
@@ -212,6 +211,5 @@ footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
 function toggleMenu() { document.getElementById('navMenu').classList.toggle('active'); }
 document.querySelectorAll('.nav-menu a').forEach(link => { link.addEventListener('click', ()=>{ document.getElementById('navMenu').classList.remove('active'); }); });
 </script>
-
 </body>
 </html>

@@ -26,7 +26,7 @@ a { text-decoration:none; }
   --text-light:#fff;
   --shadow-sm:0 2px 8px rgba(0,0,0,0.1);
   --shadow-md:0 4px 16px rgba(0,0,0,0.15);
-  --feature-gray:#95A5A6;
+  --feature-gray:#34495E; /* لون المميزات */
   --contact-gray:#34495E; /* نفس درجة الخلفية */
 }
 
@@ -36,7 +36,7 @@ a { text-decoration:none; }
 /* Navbar */
 .navbar { background:#fff; box-shadow:var(--shadow-sm); position:sticky; top:0; z-index:1000; }
 .nav-container { display:flex; justify-content:space-between; align-items:center; padding:15px 20px; }
-.logo-text { font-size:24px; font-weight:900; color:#fff; } /* GO ANIME باللون الأبيض */
+.logo-text { font-size:24px; font-weight:900; color:#34495E; } /* GO ANIME باللون الرمادي المطلوب */
 .nav-menu { display:flex; list-style:none; gap:30px; }
 .nav-menu a { color:var(--text-dark); font-weight:600; position:relative; }
 .nav-menu a::after { content:''; position:absolute; bottom:-5px; left:0; width:0; height:3px; background:var(--accent-color); transition:0.3s; }
@@ -117,7 +117,7 @@ footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
 <!-- Navbar -->
 <nav class="navbar">
   <div class="nav-container">
-    <a href="#" class="logo"><span class="logo-text" style="color:#34495E;">GO ANIME</span></a>
+    <a href="#" class="logo"><span class="logo-text">GO ANIME</span></a>
     <div class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></div>
     <ul class="nav-menu" id="navMenu">
       <li><a href="#home" class="active">الرئيسية</a></li>

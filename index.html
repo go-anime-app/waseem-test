@@ -2,229 +2,218 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>GO ANIME - تحميل تطبيق جو انمي</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<title>GO ANIME</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  font-family:'Cairo',sans-serif;
-  background:#fff;
-  color:#2C3E50;
-}
-
 :root{
-  --dark:#2C3E50;
-  --gray:#34495E;
-  --light:#F5F7FA;
-  --shadow:0 4px 16px rgba(0,0,0,.15);
+  --main-gray:#34495E;
+  --light-gray:#f4f6f8;
+  --shadow-sm:0 5px 15px rgba(0,0,0,.08);
 }
 
-.container{max-width:1200px;margin:auto;padding:0 20px}
+*{box-sizing:border-box;font-family:Tajawal,Arial}
+body{margin:0;background:#fff;color:#333}
 
-/* Navbar */
-.navbar{
-  background:#fff;
-  box-shadow:0 2px 8px rgba(0,0,0,.1);
-}
-.nav-container{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 0;
-}
-.logo-text{
-  font-size:24px;
-  font-weight:900;
-  color:#34495E;
-}
-
-/* Hero */
-.hero{
-  background:linear-gradient(135deg,#2C3E50,#34495E);
+/* ===== HEADER ===== */
+header{
+  background:linear-gradient(135deg,#2c3e50,#34495E);
   color:#fff;
-  padding:80px 0;
+  padding:60px 20px;
   text-align:center;
 }
-.hero h1{
+header h1{
+  margin:0 0 15px;
+  color:#d0d4d8;
   font-size:42px;
-  font-weight:900;
 }
-.hero p{
-  font-size:20px;
-  margin:15px 0 30px;
+header p{
+  max-width:700px;
+  margin:0 auto 30px;
+  font-size:18px;
+  line-height:1.8;
 }
 .hero-buttons{
   display:flex;
-  gap:15px;
   justify-content:center;
+  gap:15px;
   flex-wrap:wrap;
 }
-.btn{
+.hero-buttons a{
+  padding:14px 30px;
+  border-radius:30px;
   background:#fff;
-  color:#2C3E50;
-  padding:16px 32px;
-  border-radius:12px;
+  color:var(--main-gray);
   font-weight:700;
-  font-size:18px;
-  transition:.3s;
-}
-.btn:hover{
-  transform:translateY(-3px);
-  box-shadow:var(--shadow);
+  box-shadow:var(--shadow-sm);
 }
 
-/* Contact Buttons */
-.contact-bar{
-  padding:50px 0;
+/* ===== FEATURES ===== */
+.features{
+  padding:70px 20px;
+  background:var(--light-gray);
 }
-.contact-links{
+.features h2{
+  text-align:center;
+  margin-bottom:50px;
+  font-size:34px;
+}
+.features-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+  max-width:1100px;
+  margin:auto;
+}
+.feature{
+  background:#fff;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:var(--shadow-sm);
+}
+.feature h3{
+  margin-top:0;
+  color:var(--main-gray);
+}
+.feature span{
+  display:inline-block;
+  margin-top:15px;
+  padding:8px 18px;
+  border-radius:20px;
+  background:var(--main-gray);
+  color:#fff;
+  font-size:14px;
+}
+
+/* ===== CONTACT ===== */
+.contact{
+  padding:70px 20px;
+  text-align:center;
+}
+.contact h2{
+  margin-bottom:30px;
+  font-size:32px;
+}
+.contact-buttons{
   display:flex;
   justify-content:center;
-  gap:25px;
+  gap:20px;
   flex-wrap:wrap;
 }
-
 .social-btn{
-  width:70px;
-  height:70px;
-  background:#34495E;
+  width:90px;
+  height:90px;
+  background:var(--main-gray);
   border-radius:14px;
   display:flex;
   align-items:center;
   justify-content:center;
   transition:.3s;
-  box-shadow:0 6px 20px rgba(0,0,0,.2);
-}
-.social-btn svg{
-  width:32px;
-  height:32px;
-  fill:#fff;
 }
 .social-btn:hover{
-  transform:translateY(-6px);
-  opacity:.9;
+  transform:translateY(-5px);
+}
+.social-btn svg{
+  width:38px;
+  height:38px;
+  fill:#fff;
 }
 
-/* Features */
-.features{
-  background:var(--light);
-  padding:80px 0;
-}
-.features h2{
-  text-align:center;
-  font-size:40px;
-  margin-bottom:50px;
-}
-.features-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-}
-.feature{
-  background:#34495E;
-  color:#fff;
-  padding:35px 25px;
-  border-radius:20px;
-  text-align:center;
-  transition:.3s;
-}
-.feature:hover{
-  transform:translateY(-8px);
-  box-shadow:var(--shadow);
-}
-.feature-icon{
-  width:80px;
-  height:80px;
-  background:#fff;
-  color:#34495E;
-  border-radius:20px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:36px;
-  margin:0 auto 20px;
-}
-.feature h3{
-  font-size:22px;
-  margin-bottom:10px;
-}
-
-/* Download */
-.download{
-  background:linear-gradient(135deg,#2C3E50,#34495E);
-  color:#fff;
-  padding:80px 0;
-  text-align:center;
-}
-
-/* Footer */
+/* ===== FOOTER ===== */
 footer{
-  background:#131820;
-  color:#ccc;
-  padding:40px 0;
+  padding:25px;
   text-align:center;
+  background:#111;
+  color:#aaa;
+  font-size:14px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- Navbar -->
-<div class="navbar">
-  <div class="container nav-container">
-    <div class="logo-text">GO ANIME</div>
+<header>
+  <h1>GO ANIME</h1>
+  <p>تحميل تطبيق جو أنمي – أفضل تطبيق لمشاهدة مسلسلات وأفلام الأنمي المترجمة بجودة عالية وسرعة تشغيل</p>
+  <div class="hero-buttons">
+    <a href="#">⬇️ تحميل التطبيق</a>
+    <a href="#">زيارة الموقع</a>
   </div>
-</div>
+</header>
 
-<!-- Hero -->
-<section class="hero">
-  <div class="container">
-    <h1>تحميل تطبيق جو انمي</h1>
-    <p>أفضل تطبيق لمشاهدة مسلسلات وأفلام الانمي المترجمة</p>
-    <div class="hero-buttons">
-      <a href="#" class="btn">⬇️ تحميل التطبيق</a>
-      <a href="#" class="btn">🔄 تحديث التطبيق</a>
+<section class="features">
+  <h2>مميزات التطبيق</h2>
+  <div class="features-grid">
+
+    <div class="feature">
+      <h3>مكتبة أنمي ضخمة</h3>
+      <p>آلاف مسلسلات وأفلام الأنمي المترجمة بتنوع يناسب جميع الأذواق</p>
+      <span>أنمي بلا حدود</span>
     </div>
+
+    <div class="feature">
+      <h3>حلقات فور صدورها</h3>
+      <p>إضافة حلقات الأنمي الجديدة مباشرة بعد صدورها بدون تأخير</p>
+      <span>تحديث مستمر</span>
+    </div>
+
+    <div class="feature">
+      <h3>جودة عالية وسرعة تشغيل</h3>
+      <p>تشغيل سريع مع جودات متعددة وتجربة مشاهدة سلسة</p>
+      <span>أفضل أداء</span>
+    </div>
+
+    <div class="feature">
+      <h3>واجهة بسيطة</h3>
+      <p>تصميم أنيق وسهل الاستخدام للوصول السريع للمحتوى</p>
+      <span>سهل الاستخدام</span>
+    </div>
+
+    <div class="feature">
+      <h3>تحميل الحلقات</h3>
+      <p>تحميل الحلقات ومشاهدتها لاحقًا بدون إنترنت</p>
+      <span>مشاهدة أوفلاين</span>
+    </div>
+
+    <div class="feature">
+      <h3>طلب الأنمي</h3>
+      <p>اطلب أي مسلسل أنمي وسيتم إضافته بأسرع وقت</p>
+      <span>تفاعل مباشر</span>
+    </div>
+
   </div>
 </section>
 
-<!-- Social Buttons -->
-<section class="contact-bar">
-  <div class="container">
-    <div class="contact-links">
+<section class="contact">
+  <h2>تواصل معنا</h2>
+  <div class="contact-buttons">
 
-      <!-- Telegram -->
-      <a href="https://t.me/goanimeapp" target="_blank" class="social-btn">
-        <svg viewBox="0 0 24 24">
-          <path d="M9.993 15.674 9.83 19.9c.47 0 .67-.2.91-.44l2.18-2.08 4.52 3.3c.83.46 1.42.22 1.64-.77l2.97-13.9c.27-1.25-.45-1.74-1.25-1.44L2.47 9.13c-1.2.47-1.18 1.14-.22 1.44l4.7 1.47L18.6 6.48c.55-.36 1.05-.16.64.2"/>
-        </svg>
-      </a>
+    <!-- Telegram -->
+    <a href="https://t.me/goanimeapp" class="social-btn" target="_blank">
+      <svg viewBox="0 0 24 24">
+        <path d="M9.9 15.6l-.4 4.1c.6 0 .9-.3 1.3-.7l3-2.8 6.2 4.5c1.1.6 1.9.3 2.2-1l4-18.8h0c.4-1.8-.7-2.5-1.8-2.1L1.2 9.5C-.6 10.2-.6 11.1.9 11.6l5.6 1.7L19.6 5.7c.8-.5 1.6-.2 1 .3"/>
+      </svg>
+    </a>
 
-      <!-- Instagram -->
-      <a href="https://www.instagram.com/goanimeapp" target="_blank" class="social-btn">
-        <svg viewBox="0 0 24 24">
-          <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.5A4.5 4.5 0 1 0 16.5 12 4.5 4.5 0 0 0 12 7.5zm6.2-1.3a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1z"/>
-        </svg>
-      </a>
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/goanimeapp" class="social-btn" target="_blank">
+      <svg viewBox="0 0 24 24">
+        <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5.3A4.7 4.7 0 1 1 7.3 12 4.7 4.7 0 0 1 12 7.3zm6 0.4a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z"/>
+      </svg>
+    </a>
 
-      <!-- Facebook -->
-      <a href="https://www.facebook.com/goanimeapp" target="_blank" class="social-btn">
-        <svg viewBox="0 0 24 24">
-          <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-2.9h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6v1.9h2.8L16 14.9h-2.3v7A10 10 0 0 0 22 12"/>
-        </svg>
-      </a>
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/goanimeapp" class="social-btn" target="_blank">
+      <svg viewBox="0 0 24 24">
+        <path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.7-1.6 1.5V12H16l-.4 3h-2.3v7A10 10 0 0 0 22 12z"/>
+      </svg>
+    </a>
 
-    </div>
   </div>
 </section>
 
-<!-- Footer -->
 <footer>
-  © 2026 GO ANIME – جميع الحقوق محفوظة
+© 2026 GO ANIME – جميع الحقوق محفوظة
 </footer>
 
 </body>

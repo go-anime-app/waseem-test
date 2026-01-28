@@ -3,210 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>GO ANIME - تحميل تطبيق جو انمي</title>
 <meta name="description" content="أفضل تطبيق لمشاهدة مسلسلات وأفلام الأنمي المترجمة. حمل التطبيق الآن وابدأ المغامرة!">
-<meta name="keywords" content="أنمي, جو انمي, Anime, تطبيق مشاهدة الانمي, مسلسلات أنمي, أفلام أنمي">
-
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<meta name="keywords" content="أنمي, جو انمي, Anime, تطبيق مشاهدة الانمي">
 
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Cairo','Tajawal',sans-serif; line-height:1.7; color:#2C3E50; background:#fff; overflow-x:hidden; }
-a { text-decoration:none; }
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Cairo','Tajawal',sans-serif;line-height:1.6;color:#2C3E50;background:#fff;}
+a{text-decoration:none;}
 
-:root {
-  --primary-dark:#2C3E50;
-  --accent-color:#FF5252;
-  --light-bg:#F5F7FA;
-  --text-dark:#2C3E50;
-  --text-light:#fff;
-  --shadow-sm:0 2px 8px rgba(0,0,0,0.1);
-  --shadow-md:0 4px 16px rgba(0,0,0,0.15);
-  --feature-gray:#95A5A6;
-}
-
-/* Containers */
-.container { max-width:1200px; margin:0 auto; padding:0 20px; }
-
-/* Navbar */
-.navbar { background:#fff; box-shadow:var(--shadow-sm); position:sticky; top:0; z-index:1000; }
-.nav-container { display:flex; justify-content:space-between; align-items:center; padding:15px 20px; }
-.logo-text { font-size:24px; font-weight:900; color:#fff; } /* GO ANIME باللون الأبيض */
-.nav-menu { display:flex; list-style:none; gap:30px; }
-.nav-menu a { color:var(--text-dark); font-weight:600; position:relative; }
-.nav-menu a::after { content:''; position:absolute; bottom:-5px; left:0; width:0; height:3px; background:var(--accent-color); transition:0.3s; }
-.nav-menu a:hover::after, .nav-menu a.active::after { width:100%; }
-.menu-toggle { display:none; flex-direction:column; gap:5px; cursor:pointer; }
-.menu-toggle span { width:25px; height:3px; background:var(--primary-dark); border-radius:2px; }
+.container{max-width:1200px;margin:0 auto;padding:20px;}
+h1,h2,h3{margin-bottom:15px;}
+p{margin-bottom:15px;}
 
 /* Hero */
-.hero { background:linear-gradient(135deg,#2C3E50 0%,#34495E 100%); color:#fff; padding:80px 0; }
-.hero-content { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
-.hero-text h1 { font-size:48px; font-weight:900; margin-bottom:20px; line-height:1.2; }
-.hero-text p { font-size:20px; margin-bottom:35px; opacity:0.95; }
-.hero-buttons { display:flex; gap:15px; flex-wrap:wrap; }
-.btn { display:inline-flex; align-items:center; gap:10px; padding:16px 32px; font-size:18px; font-weight:700; border-radius:12px; transition:all 0.3s; cursor:pointer; border:none; }
-.btn-primary { background:#fff; color:var(--primary-dark); } /* لون التحميل بنفس لون التحديث */
-.btn-primary:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
-.btn-secondary { background:#fff; color:var(--primary-dark); }
-.btn-secondary:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
-
-/* Contact Bar Buttons */
-.contact-bar { padding:25px 0; text-align:center; }
-.contact-links { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
-.contact-links a {
-  display:inline-flex; align-items:center; gap:10px;
-  padding:12px 24px; border-radius:10px;
-  font-weight:600; color:#fff; transition:0.3s;
-}
-.contact-links a.telegram { background:#0088cc; }
-.contact-links a.instagram { background:#C13584; }
-.contact-links a.facebook { background:#3b5998; }
-.contact-links a:hover { transform:translateY(-3px); opacity:0.9; }
+.hero{background:linear-gradient(135deg,#2C3E50 0%,#34495E 100%);color:#fff;padding:60px 20px;text-align:center;}
+.hero h1{font-size:36px;font-weight:900;}
+.hero p{font-size:18px;margin-bottom:25px;}
+.hero .btn{display:inline-block;padding:14px 30px;margin:5px;font-weight:700;border-radius:10px;transition:0.3s;cursor:pointer;border:none;}
+.btn-primary{background:#fff;color:#2C3E50;}
+.btn-secondary{background:#fff;color:#2C3E50;}
+.btn-primary:hover,.btn-secondary:hover{transform:translateY(-3px);}
 
 /* Features */
-.features-section { padding:80px 0; background:var(--light-bg); }
-.section-title { text-align:center; margin-bottom:60px; }
-.section-title h2 { font-size:42px; font-weight:900; color:var(--text-dark); margin-bottom:15px; }
-.features-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:40px; }
-.feature-card { background:var(--feature-gray); padding:40px 30px; border-radius:20px; text-align:center; box-shadow:var(--shadow-sm); transition:0.4s; cursor:pointer; color:#fff; }
-.feature-card:hover { transform:translateY(-10px); box-shadow:0 8px 32px rgba(0,0,0,0.2); }
-.feature-icon { width:80px; height:80px; margin:0 auto 25px; background:#fff; border-radius:20px; display:flex; align-items:center; justify-content:center; color:var(--feature-gray); font-size:36px; font-weight:bold; }
-.feature-card h3 { font-size:24px; font-weight:800; margin-bottom:15px; }
-.feature-card p { font-size:16px; line-height:1.8; }
+.features-section{padding:50px 20px;background:#F5F7FA;text-align:center;}
+.features-section h2{font-size:32px;font-weight:900;margin-bottom:40px;}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.feature-card{background:#95A5A6;color:#fff;padding:25px 15px;border-radius:15px;}
+.feature-card h3{font-size:20px;font-weight:700;margin-bottom:10px;}
 
-/* Download Section */
-.download-section { padding:80px 0; background:linear-gradient(135deg,#2C3E50 0%,#34495E 100%); color:#fff; text-align:center; }
-.download-content h2 { font-size:42px; font-weight:900; margin-bottom:20px; }
-.download-buttons { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; }
-/* زر التحميل والتحديث */
-.download-buttons .btn-primary { background:#fff; color:var(--primary-dark); }
-.download-buttons .btn-primary:hover { transform:translateY(-3px); }
-.download-buttons .btn-secondary { background:#fff; color:var(--primary-dark); }
-.download-buttons .btn-secondary:hover { transform:translateY(-3px); }
+/* Download */
+.download-section{padding:50px 20px;background:linear-gradient(135deg,#2C3E50 0%,#34495E 100%);color:#fff;text-align:center;}
+.download-section h2{font-size:32px;font-weight:900;margin-bottom:20px;}
 
-/* Footer */
-footer { background:#131820; color:#ECF0F1; padding:50px 0 30px; }
-.footer-content { display:grid; grid-template-columns:2fr 1fr 1fr; gap:50px; margin-bottom:40px; }
-.footer-logo span { font-size:24px; font-weight:900; color:#fff; } /* GO ANIME أبيض */
-.footer-links h4 { font-size:20px; font-weight:700; margin-bottom:20px; color:#fff; }
-.footer-links ul { list-style:none; }
-.footer-links ul li { margin-bottom:12px; }
-.footer-links ul li a { color:#95A5A6; font-size:15px; transition:0.3s; }
-.footer-links ul li a:hover { color:var(--accent-color); padding-right:5px; }
-.footer-bottom { text-align:center; padding-top:30px; border-top:1px solid rgba(255,255,255,0.1); color:#95A5A6; font-size:15px; }
+/* Contact */
+.contact-bar{text-align:center;padding:25px 20px;background:#F5F7FA;}
+.contact-links a{display:inline-block;margin:5px;padding:10px 20px;border-radius:10px;color:#fff;font-weight:600;transition:0.3s;}
+.contact-links a.telegram{background:#0088cc;}
+.contact-links a.instagram{background:#C13584;}
+.contact-links a.facebook{background:#3b5998;}
+.contact-links a:hover{opacity:0.9;}
 
 /* Responsive */
-@media (max-width:968px) { .hero-content { grid-template-columns:1fr; gap:40px; text-align:center; } }
-@media (max-width:768px) { .menu-toggle { display:flex; } .nav-menu { flex-direction:column; max-height:0; overflow:hidden; transition:0.3s; } .nav-menu.active { max-height:300px; } .nav-menu li { border-bottom:1px solid #E0E4E8; } .hero-buttons, .download-buttons { flex-direction:column; } .btn { width:100%; justify-content:center; } }
-@media (max-width:480px) { .hero-text h1 { font-size:28px; } .section-title h2 { font-size:26px; } .feature-card { padding:30px 20px; } }
+@media(max-width:768px){.hero h1{font-size:28px;}.features-section h2,.download-section h2{font-size:26px;}}
 </style>
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar">
-  <div class="nav-container">
-    <a href="#" class="logo"><span class="logo-text">GO ANIME</span></a>
-    <div class="menu-toggle" onclick="toggleMenu()"><span></span><span></span><span></span></div>
-    <ul class="nav-menu" id="navMenu">
-      <li><a href="#home" class="active">الرئيسية</a></li>
-      <li><a href="#features">المميزات</a></li>
-      <li><a href="#download">التنزيل</a></li>
-    </ul>
-  </div>
-</nav>
-
 <!-- Hero -->
-<section class="hero" id="home">
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>تحميل تطبيق جو انمي</h1>
-        <p>أفضل تطبيق لمشاهدة مسلسلات وأفلام الانمي المترجمة</p>
-        <div class="hero-buttons">
-          <a href="#" class="btn btn-primary" download>⬇️ تحميل التطبيق</a>
-          <a href="#" class="btn btn-secondary" download>🔄 تحديث التطبيق</a>
-        </div>
-      </div>
-      <div class="hero-image">
-        <img src="img/phone-image.png" alt="تطبيق جو انمي">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact Bar -->
-<section class="contact-bar">
-  <div class="container">
-    <div class="contact-links">
-      <a href="https://t.me/goanimeapp" target="_blank" class="telegram">📱 تليجرام</a>
-      <a href="https://www.instagram.com/goanimeapp" target="_blank" class="instagram">📸 انستجرام</a>
-      <a href="https://www.facebook.com/goanimeapp" target="_blank" class="facebook">📘 فيسبوك</a>
-    </div>
-  </div>
+<section class="hero">
+  <h1>تحميل تطبيق جو انمي</h1>
+  <p>أفضل تطبيق لمشاهدة مسلسلات وأفلام الانمي المترجمة</p>
+  <a href="#" class="btn btn-primary" download>⬇️ تحميل التطبيق</a>
+  <a href="#" class="btn btn-secondary" download>🔄 تحديث التطبيق</a>
 </section>
 
 <!-- Features -->
-<section class="features-section" id="features">
-  <div class="container">
-    <div class="section-title"><h2>مميزات تطبيق جو انمي</h2></div>
-    <div class="features-grid">
-      <div class="feature-card"><div class="feature-icon">🎬</div><h3>مكتبة أنمي ضخمة</h3><p>آلاف مسلسلات وأفلام الأنمي المترجمة بتنوع يناسب جميع الأذواق</p></div>
-      <div class="feature-card"><div class="feature-icon">⏱️</div><h3>حلقات فور صدورها</h3><p>إضافة حلقات الانمي الجديدة مباشرة بعد صدورها بدون تأخير</p></div>
-      <div class="feature-card"><div class="feature-icon">⚡</div><h3>جودة عالية وسرعة تشغيل</h3><p>تشغيل سريع لمسلسلات الانمي مع جودات متعددة وتجربة مشاهدة سلسة</p></div>
-      <div class="feature-card"><div class="feature-icon">🖥️</div><h3>واجهة بسيطة</h3><p>تصميم أنيق وسهل الاستخدام للوصول السريع لمسلسلات والافلام الانمي</p></div>
-      <div class="feature-card"><div class="feature-icon">⬇️</div><h3>تحميل الحلقات</h3><p>تحميل حلقات وافلام الانمي ومشاهدتها لاحقًا بدون إنترنت</p></div>
-      <div class="feature-card"><div class="feature-icon">📝</div><h3>طلب الأنمي</h3><p>اطلب أي مسلسل أنمي وسيتم إضافته بأسرع وقت ممكن</p></div>
-    </div>
+<section class="features-section">
+  <h2>مميزات تطبيق جو انمي</h2>
+  <div class="features-grid">
+    <div class="feature-card"><h3>مكتبة أنمي ضخمة</h3><p>آلاف مسلسلات وأفلام الأنمي المترجمة بتنوع يناسب جميع الأذواق</p></div>
+    <div class="feature-card"><h3>حلقات فور صدورها</h3><p>إضافة حلقات الانمي الجديدة مباشرة بعد صدورها بدون تأخير</p></div>
+    <div class="feature-card"><h3>جودة عالية وسرعة تشغيل</h3><p>تشغيل سريع لمسلسلات الانمي مع جودات متعددة وتجربة مشاهدة سلسة</p></div>
+    <div class="feature-card"><h3>واجهة بسيطة</h3><p>تصميم أنيق وسهل الاستخدام للوصول السريع لمسلسلات والافلام الانمي</p></div>
+    <div class="feature-card"><h3>تحميل الحلقات</h3><p>تحميل حلقات وافلام الانمي ومشاهدتها لاحقًا بدون إنترنت</p></div>
+    <div class="feature-card"><h3>طلب الأنمي</h3><p>اطلب أي مسلسل أنمي وسيتم إضافته بأسرع وقت ممكن</p></div>
   </div>
 </section>
 
-<!-- Download Section -->
-<section class="download-section" id="download">
-  <div class="container">
-    <div class="download-content">
-      <h2>تحميل تطبيق جو انمي</h2>
-      <p>قم بتنزيل التطبيق الآن من خلال الرابط المباشر.</p>
-      <div class="download-buttons">
-        <a href="#" class="btn btn-primary" download>⬇️ تحميل</a>
-        <a href="#" class="btn btn-secondary" download>🔄 تحديث</a>
-      </div>
-    </div>
+<!-- Download -->
+<section class="download-section">
+  <h2>تحميل تطبيق جو انمي</h2>
+  <a href="#" class="btn btn-primary" download>⬇️ تحميل</a>
+  <a href="#" class="btn btn-secondary" download>🔄 تحديث</a>
+</section>
+
+<!-- Contact -->
+<section class="contact-bar">
+  <div class="contact-links">
+    <a href="https://t.me/goanimeapp" target="_blank" class="telegram">📱 تليجرام</a>
+    <a href="https://www.instagram.com/goanimeapp" target="_blank" class="instagram">📸 انستجرام</a>
+    <a href="https://www.facebook.com/goanimeapp" target="_blank" class="facebook">📘 فيسبوك</a>
   </div>
 </section>
 
-<!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="footer-content">
-      <div class="footer-brand">
-        <p>أفضل تطبيق لمشاهدة مسلسلات وأفلام الأنمي المترجمة. حمل التطبيق الآن وابدأ المغامرة!</p>
-      </div>
-      <div class="footer-links">
-        <h4>روابط سريعة</h4>
-        <ul><li><a href="#home">الرئيسية</a></li><li><a href="#features">المميزات</a></li><li><a href="#download">التنزيل</a></li></ul>
-      </div>
-      <div class="footer-links">
-        <h4>تواصل معنا</h4>
-        <ul>
-          <li><a href="https://t.me/goanimeapp" target="_blank">تليجرام</a></li>
-          <li><a href="https://www.instagram.com/goanimeapp" target="_blank">انستجرام</a></li>
-          <li><a href="https://www.facebook.com/goanimeapp" target="_blank">فيسبوك</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">© 2026 GO ANIME. جميع الحقوق محفوظة.</div>
-  </div>
-</footer>
-
-<script>
-function toggleMenu() { document.getElementById('navMenu').classList.toggle('active'); }
-document.querySelectorAll('.nav-menu a').forEach(link => { link.addEventListener('click', ()=>{ document.getElementById('navMenu').classList.remove('active'); }); });
-</script>
 </body>
 </html>
